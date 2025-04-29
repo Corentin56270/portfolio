@@ -107,6 +107,39 @@ main {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espace entre les boîtes de projets */
+    justify-content: center;
+  }
+  
+  .project {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 40%; /* Ajuste selon la taille que tu veux */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    transition: transform 0.2s ease;
+  }
+  
+  .project:hover {
+    transform: scale(1.03);
+  }
+  
+  .project h3 {
+    font-size: 1.3rem; /* Augmentation de la taille de police */
+    margin-bottom: 10px; /* Espace entre le titre et l’image */
+  }
+  
+  .project img {
+    width: 100%;
+    border-radius: 5px;
+  }
+
 /* Footer */
 footer {
     background-color: var(--primary-color);
