@@ -26,9 +26,24 @@
         <h2>Contact :</h2>
         <br>
 
+        <script>
+            function openMail() {
+                window.open("mailto:tanguycorentin56@gmail.com")
+            }
+            function openLinkedIn() {
+                window.open("https://www.linkedin.com/in/corentin-tanguy-189623363/")
+            }
+            function openGithub() {
+                window.open("https://github.com/Corentin56270")
+            }
+        </script>
+
         <div id="contact" class="contact">
-            <button href="mailto:tanguycorentin56@gmail.com" class="contact">Email : tanguycorentin56@gmail.com</button> </br>
-            <button href="https://www.linkedin.com/in/corentin-tanguy-189623363/" class="contact">LinkedIn : Corentin TANGUY</button>
+            <button onclick=openMail() class="contact">Email : tanguycorentin56@gmail.com</button> </br>
+
+            <button onclick=openLinkedIn() class="contact">LinkedIn : Corentin TANGUY</button>
+
+            <button onclick=openGithub() class="contact">GitHub : Corentin56270</button>
         </div>
 
     <footer>
