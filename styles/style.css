@@ -21,7 +21,15 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    flex: 1;
+    height: 100%; 
+    margin: 0;
 }
+
+main {
+    flex: 1;
+}
+
 
 .container {
     width: 90%;
@@ -186,11 +194,15 @@ main {
 /* Footer */
 footer {
     background-color: var(--primary-color);
+    color: var(--text-color); 
     padding: 15px 0;
     border-top: 3px solid var(--secondary-color);
     text-align: center;
     font-size: 0.9rem;
     word-spacing: 0.2rem;
+    width: 100%;
+    position: relative;
+    z-index: 1;
 }
 
 .project {
@@ -206,8 +218,82 @@ footer {
     background-color: var(--primary-color); /* Même fond que le site pour bien intégrer */
 }
 
+.background-shapes {
+    position: fixed;
+    bottom: 0px; /* 👈 remonte légèrement (valeur négative = monte) */
+    left: 0;
+    width: 100%;
+    height: 300px;
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+}
+
+
+.background-shapes svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 40px auto;
+    width: 100%;
+}
+
+
+.contact-btn {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: fit-content;
+    min-width: 260px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-btn:hover {
+    background-color: var(--accent-color);
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.contact-header {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
 
 /* Slider */
+.pc-slider {
+    position: relative;
+    padding-top: 40px; /* Ajustez si nécessaire pour l'espace au-dessus du slider */
+    padding-bottom: 10px;
+    text-align: center; /* Centre le titre horizontalement */
+}
+
+.slider-title {
+    color: white; /* Couleur du texte en blanc */
+    font-size: 1.5em; /* Taille de la police du titre */
+    margin-bottom: 10px; /* Ajoute un peu d'espace entre le titre et le slider */
+    position: static; /* Le titre suit le flux normal du document maintenant */
+}
+
 .slider {
     position: relative;
     width: 100%;
@@ -223,9 +309,21 @@ footer {
     transition: transform 0.5s ease-in-out;
 }
 
+.slides figure {
+    margin: 0;
+}
+
 .slides img {
     width: 100%;
     border-radius: 12px;
+    display: block;
+}
+
+.slides figcaption {
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9em;
+    color: #555;
 }
 
 .navigation-manual {
